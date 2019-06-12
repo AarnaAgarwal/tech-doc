@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Lobster|Roboto|Lato|Satisfy|Roboto Slab" rel="stylesheet" type="text/css">
+	<title></title>
+	<style type="text/css">
+		#navbar
+		{
+			width: 30%;
+		}
+		#navbar li
+		{
+			list-style-type: none;
+			position: relative;
+			width: 100%;
+			border-top: 2px solid;
+			font-size: 25px;
+			padding-bottom: 10px;
+			
+		}
+		#navbar ul
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			overflow-y: auto;
+            overflow-x: hidden;
+
+		}
+		#navbar header
+		{
+			font-size: 30px;
+			padding: 20px;
+			text-align: center;
+		}
+		#navbar a
+		{
+			display: block;
+			position: relative;
+			text-decoration: none;
+			cursor: pointer;
+			color: pink;
+			padding: 10px 30px;
+			text-align: left;
+			font-size: 25px;
+		}
+        #navbar
+		{
+			position: fixed;
+			height: 100%;
+			background-color: #c9cdd3;
+			display: flex;
+			flex-direction: column;
+			
+		}
+		@media only screen and (max-width: 400px)
+		{
+            #main-doc {margin-left: -10px;}
+        }
+        .box
+        {
+        	display: flex;
+        	flex-direction: row;
+        }
+        #main-doc
+        {
+        	position: absolute;
+        	margin-left: 420px;
+        	padding: 20px;
+        	font-family: Roboto,Roboto Slab;
+        }
+        code
+        {
+        	display: block;
+        	height: 70px;
+        	width: 90%;
+        	background-color: #a0b6db;
+        	padding: 20px;
+        	margin: 20px;
+        }
+        #main-doc header
+        {
+        	font-size: 40px;
+        	font-family: Oswald, Roboto Slab;
+        }
+
+	</style>
+</head>
+<body class="box">
+	<nav id="navbar">
+		<header>C++ OBJECT ORIENTED PROGRAMMING</header>
+		<ul>
+			<li><a href="#Overview" class="nav-link">Overview</a></li>
+			<li><a href="#Basic_Syntax" class="nav-link">Basic Syntax</a></li>
+			<li><a href="#Program_Structure" class="nav-link">Program Structure</a></li>
+			<li><a href="#Compile_And_Execute" class="nav-link">Compile And Execute</a></li>
+			<li><a href="#Variable_Type" class="nav-link">Variable Type</a></li>
+			<li ><a href="#Function" class="nav-link">Function</a></li>
+			<li ><a href="#Inheritance" class="nav-link">Inheritance</a></li>
+			<li ><a href="#Polymorphism" class="nav-link">Polymorphism</a></li>
+			<li ><a href="#Data_Abstraction" class="nav-link">Data Abstraction</a></li>
+			<li style="border-bottom: solid"><a href="#Data_Encapsulation" class="nav-link">Data Encapsulation</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="Overview">
+			<header>Overview</header>
+			<p>C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming.
+            C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.
+            C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey, as an enhancement to the C language and originally named C with Classes but later it was renamed C++ in 1983.
+            C++ is a superset of C, and that virtually any legal C program is a legal C++ program.</p>
+			<p>The most important thing while learning C++ is to focus on concepts.
+            The purpose of learning a programming language is to become a better programmer; that is, to become more effective at designing and implementing new systems and at maintaining old ones.
+            C++ supports a variety of programming styles. You can write in the style of Fortran, C, Smalltalk, etc., in any language. Each style can achieve its aims effectively while maintaining runtime and space efficiency.</p>
+			<p>C++ is used by hundreds of thousands of programmers in essentially every application domain.
+            C++ is being highly used to write device drivers and other software that rely on direct manipulation of hardware under realtime constraints. 
+            C++ is widely used for teaching and research because it is clean enough for successful teaching of basic concepts.
+            Anyone who has used either an Apple Macintosh or a PC running Windows has indirectly used C++ because the primary user interfaces of these systems are written in C++.</p>
+			
+		</section>
+		<section class="main-section" id="Basic_Syntax">
+			<header>Basic Syntax</header>
+			<p>When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.
+			<li>Object − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors - wagging, barking, eating. An object is an instance of a class.</li>
+			<li>Class − A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.</li>
+			<li>Methods − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.</li>
+			<li>Instance Variables − Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.</li>
+			<li>Semicolon-the semicolon is a statement terminator. That is, each individual statement must be ended with a semicolon. It indicates the end of one logical entity.</li>
+			<code>x = y;<br>
+                  y = y + 1;<br>
+                  add(x, y);
+            </code>
+            <p>A block is a set of logically connected statements that are surrounded by opening and closing braces. For example −</p>
+			<code>
+				{<br>
+                cout << "Hello World"; // prints Hello World<br>
+                return 0;<br>
+                }
+			</code>
+		</section>
+		<section class="main-section" id="Program_Structure">
+			<header>Program Structure</header>
+			<p>Let us look at a simple code that would print the words Hello World.</p>
+			<code style="height: 130px;">#include <iostream><br>
+            using namespace std;<br><br>
+            // main() is where program execution begins.<br><br>
+            int main() {<br>
+            cout << "Hello World"; // prints Hello World<br>
+            return 0;<br>
+            }
+            </code>
+            <p>Let us look at the various parts of the above program −</p>
+			<li>The C++ language defines several headers, which contain information that is either necessary or useful to your program. For this program, the header <iostream> is needed.</li>
+			<li>The line using namespace std; tells the compiler to use the std namespace. Namespaces are a relatively recent addition to C++.</li>
+			<li>The next line '// main() is where program execution begins.' is a single-line comment available in C++. Single-line comments begin with // and stop at the end of the line.</li>
+			<li>The line int main() is the main function where program execution begins.</li>
+			<li>The next line cout << "Hello World"; causes the message "Hello World" to be displayed on the screen.</li>
+			<li>The next line return 0; terminates main( )function and causes it to return the value 0 to the calling process.</li>
+
+		</section>
+		<section class="main-section" id="Compile_And_Execute">
+			<header>Compile And Execute</header>
+			<p></p>
+			<li>Open a text editor and add the code as above.</li>
+			<li>Save the file as: hello.cpp</li>
+			<li>Open a command prompt and go to the directory where you saved the file.</li>
+			<li>Type 'g++ hello.cpp' and press enter to compile your code. If there are no errors in your code the command prompt will take you to the next line and would generate a.out executable file.</li>
+			<li>Now, type 'a.out' to run your program.</li>
+			<li>You will be able to see ' Hello World ' printed on the window.</li>
+			<code>$ g++ hello.cpp<br>
+                  $ ./a.out<br>
+                  Hello World
+            </code>
+            <p>Make sure that g++ is in your path and that you are running it in the directory containing file hello.cpp.</p>
+		</section>
+		<section class="main-section" id="Variable_Type">
+			<header>Variable Type</header>
+			<p>A variable provides us with named storage that our programs can manipulate. Each variable in C++ has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</p>
+			<p>The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C++ is case-sensitive.</p>
+			<h4>Variable Definition in C++</h4>
+			<p>Type must be a valid C++ data type including char, w_char, int, float, double, bool or any user-defined object, etc., and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −</p>
+			<code>int    i, j, k;<br>
+            char   c, ch;<br>
+            float  f, salary;<br>
+            double d;
+            </code>
+            <p>The line int i, j, k; both declares and defines the variables i, j and k; which instructs the compiler to create variables named i, j and k of type int.</p>
+            <p>Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows −</p>
+            <code>type variable_name = value;<br>
+            	extern int d = 3, f = 5;    // declaration of d and f.<br> 
+                int d = 3, f = 5;           // definition and initializing d and f. <br>
+                byte z = 22;                // definition and initializes z.<br> 
+                char x = 'x';               // the variable x has the value 'x'.
+            </code>
+		</section>
+		<section class="main-section" id="Function">
+			<header>Function</header>
+			<p>A function is a group of statements that together perform a task. Every C++ program has at least one function, which is main(), and all the most trivial programs can define additional functions.</p>
+			<p>You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is such that each function performs a specific task.</p>
+			<p>A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.</p>
+			<p>The C++ standard library provides numerous built-in functions that your program can call. For example, function strcat() to concatenate two strings, function memcpy() to copy one memory location to another location and many more functions.</p>
+			<p>A function is known with various names like a method or a sub-routine or a procedure etc.</p>
+			<code>return_type function_name( parameter list )<br>
+			 {<br>
+                 body of the function<br>
+            }
+            </code>
+            <p>A C++ function definition consists of a function header and a function body. Here are all the parts of a function −</p>
+            <li>Return Type − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.</li>
+            <li>Function Name − This is the actual name of the function. The function name and the parameter list together constitute the function signature.</li>
+            <li>Parameters − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.</li>
+            <li>Function Body − The function body contains a collection of statements that define what the function does.</li>
+            <code style="height: 150px;">// function returning the max between two numbers<br><br>
+                  int max(int num1, int num2) {<br>
+                 // local variable declaration<br>
+                 int result;<br>
+                if (num1 > num2)<br>
+                result = num1;<br>
+                else<br> 
+                return result;<br> 
+                 }
+            </code>
+		</section>
+		<section class="main-section" id="Inheritance">
+			<header>Inheritance</header>
+			<p>One of the most important concepts in object-oriented programming is that of inheritance. Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application. This also provides an opportunity to reuse the code functionality and fast implementation time.</p>
+			<p>When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the base class, and the new class is referred to as the derived class.</p>
+			<p>The idea of inheritance implements the is a relationship. For example, Mammal is an Animal, Dog is a Mammal hence Dog is a Animal as well and so on.</p>
+			<h2>Base and Derived Classes</h2>
+			<p>A class can be derived from more than one classes, which means it can inherit data and functions from multiple base classes. To define a derived class, we use a class derivation list to specify the base class(es). A class derivation list names one or more base classes and has the form −</p>
+			<code>class derived-class: access-specifier base-class</code>
+			<p>Where access-specifier is one of public, protected, or private, and base-class is the name of a previously defined class. If the access-specifier is not used, then it is private by default.Consider a base class Shape and its derived class Rectangle as follows −</p>
+			<code style="height: 500px;">
+				#include <iostream><br>
+                using namespace std;<br><br>
+                // Base class<br>
+                class Shape {<br>
+                public:<br>
+                void setWidth(int w) {<br>
+                width = w;<br>
+                }<br>
+                void setHeight(int h) {<br>
+                height = h;<br>
+                }<br>
+                protected:<br>
+                int width;<br>
+                int height;<br>
+                };<br><br>
+
+// Derived class<br>
+class Rectangle: public Shape {<br>
+   public:<br>
+      int getArea() { <br>
+         return (width * height); <br>
+      }<br>
+};<br>
+
+int main(void) {<br>
+   Rectangle Rect;<br>
+ 
+   Rect.setWidth(5);<br>
+   Rect.setHeight(7);<br><br>
+
+   // Print the area of the object.<br><br>
+   cout << "Total area: " << Rect.getArea() << endl;<br>
+
+   return 0;
+}</code>
+		</section>
+		<section class="main-section" id="Polymorphism">
+			<header>Polymorphism</header>
+			<p>The word polymorphism means having many forms. Typically, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance.</p>
+			<p>C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.</p>
+			<code style="height: 200px;">class Shape {<br>
+   protected:<br>
+      int width, height;<br><br>
+      
+   public:<br>
+      Shape( int a = 0, int b = 0) {<br>
+         width = a;<br>
+         height = b;<br>
+      }<br>
+      virtual int area() {<br>
+         cout << "Parent class area :" <<endl;<br>
+         return 0;<br>
+      }<br>
+};</code>
+			<p>As you can see, each of the child classes has a separate implementation for the function area(). This is how polymorphism is generally used. You have different classes with a function of the same name, and even the same parameters, but with different implementations.</p>
+		</section>
+		<section class="main-section" id="Data_Abstraction">
+			<header>Data Abstraction</header>
+			<p>Data abstraction refers to providing only essential information to the outside world and hiding their background details, i.e., to represent the needed information in program without presenting the details.</p>
+			<p>Data abstraction is a programming (and design) technique that relies on the separation of interface and implementation.</p>
+			<p>Let's take one real life example of a TV, which you can turn on and off, change the channel, adjust the volume, and add external components such as speakers, VCRs, and DVD players, BUT you do not know its internal details, that is, you do not know how it receives signals over the air or through a cable, how it translates them, and finally displays them on the screen</p>
+			<p>Thus, we can say a television clearly separates its internal implementation from its external interface and you can play with its interfaces like the power button, channel changer, and volume control without having any knowledge of its internals.</p>
+			<p>In C++, classes provides great level of data abstraction. They provide sufficient public methods to the outside world to play with the functionality of the object and to manipulate object data, i.e., state without actually knowing how class has been implemented internally.</p>
+			<p>For example, your program can make a call to the sort() function without knowing what algorithm the function actually uses to sort the given values. In fact, the underlying implementation of the sorting functionality could change between releases of the library, and as long as the interface stays the same, your function call will still work.</p>
+			<p>In C++, we use classes to define our own abstract data types (ADT). You can use the cout object of class ostream to stream data to standard output like this −</p>
+			<code>#include <iostream>
+            using namespace std;<br><br>
+
+             int main() {<br>
+             cout << "Hello C++" <<endl;<br>
+            return 0;<br>
+            }
+            </code>
+			<p>Here, you don't need to understand how cout displays the text on the user's screen. You need to only know the public interface and the underlying implementation of ‘cout’ is free to change.</p>
+		</section>
+		<section class="main-section" id="Data_Encapsulation">
+			<header>Data Encapsulation</header>
+			<p>All C++ programs are composed of the following two fundamental elements −</p>
+			<li>Program statements (code) − This is the part of a program that performs actions and they are called functions.</li>
+			<li>Program data − The data is the information of the program which gets affected by the program functions.</li>
+			<p>Encapsulation is an Object Oriented Programming concept that binds together the data and functions that manipulate the data, and that keeps both safe from outside interference and misuse. Data encapsulation led to the important OOP concept of data hiding.</p>
+			<p>Data encapsulation is a mechanism of bundling the data, and the functions that use them and data abstraction is a mechanism of exposing only the interfaces and hiding the implementation details from the user.</p>
+			<p>C++ supports the properties of encapsulation and data hiding through the creation of user-defined types, called classes. We already have studied that a class can contain private, protected and public members. By default, all items defined in a class are private. For example −</p>
+			<p>The variables length, breadth, and height are private. This means that they can be accessed only by other members of the Box class, and not by any other part of your program. This is one way encapsulation is achieved.</p>
+			<p>To make parts of a class public (i.e., accessible to other parts of your program), you must declare them after the public keyword. All variables or functions defined after the public specifier are accessible by all other functions in your program.</p>
+			<p>Making one class a friend of another exposes the implementation details and reduces encapsulation. The ideal is to keep as many of the details of each class hidden from all other classes as possible.</p>
+			<code style="height: 500px">
+				#include <iostream><br>
+using namespace std;<br><br>
+
+class Adder {<br>
+   public:<br>
+      // constructor<br>
+      Adder(int i = 0) {<br>
+         total = i;<br>
+      }<br><br>
+      
+      // interface to outside world<br>
+      void addNum(int number) {<br>
+         total += number;<br>
+      }<br><br>
+      
+      // interface to outside world<br>
+      int getTotal() {<br>
+         return total;<br>
+      };<br><br>
+   
+   private:<br>
+      // hidden data from outside world<br>
+      int total;<br>
+};<br><br>
+
+int main() {<br>
+   Adder a;<br><br>
+   
+   a.addNum(10);<br>
+   a.addNum(20);<br>
+   a.addNum(30);<br>
+
+   cout << "Total " << a.getTotal() <<endl;<br>
+   return 0;<br>
+}
+			</code>
+		</section>
+	</main>
+
+</body>
+</html>
